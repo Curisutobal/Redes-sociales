@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSR - Renderizado en el Cliente</title>
+    <style>body { font-family: Arial, sans-serif; }</style>
+</head>
+<body>
+    <h1 id="titulo">Cargando...</h1>
+    <p id="mensaje"></p>
+    <p><a href="/ssr">Volver a SSR</a></p>
+
+    <script>
+    setTimeout(() => {
+        fetch('/api/user')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("titulo").innerText = "Bienvenido, " + data.name + "!";
+                document.getElementById("mensaje").innerText = data.message;
+            })
+            .catch(error => console.error("Error:", error));
+            }, 2000)
+    </script>
+</body>
+</html>

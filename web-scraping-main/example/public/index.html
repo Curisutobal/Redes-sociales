@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        color: white;
+        background-color: black;
+        padding: 10px;
+      }
+
+      .p2 {
+        background-color: brown;
+      }
+
+
+      .p2:hover{
+        background-color: cadetblue;
+        font-size: xx-large;
+      }
+
+      #p4 {
+        font-size: x-large;
+        background-color: white;
+        color: black;
+      }
+
+      .margin {
+        margin: 10px;
+      }
+
+      body {
+        background-color: blueviolet;
+        margin: 0px;
+      }
+      p.hola2 {
+        background-color: gray;
+      }
+
+      div div div p{
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is a paragraph.</p>
+    <p class="p2">This is a paragraph 2.</p>
+    <p class="p2 margin">This is a paragraph 3.</p>
+
+    <div>
+    <div>
+      <div>
+        <p>Hola mundo!!!</p>
+        <p class="hola2">Hola mundo!!!</p>
+        <h3 class="hola2">Hola mundo!!!22</h3>
+      </div>
+    </div>
+    </div>
+
+    <p id="p4" class="p2 margin">This is a paragraph 3.</p>
+    <a href="https://example.com">This is a link.</a>
+
+    <p id="p5" class="p2 margin">Contador: 0</p>
+
+    <button onclick="imprimirEnConsola()">Click</button>
+    <button onclick="cambiarTextoParrafo()">Cambiar</button>
+
+    <button onclick="contador.add()">Agregar 1</button>
+    <button onclick="contador.remove()">Quitar 1</button>
+    <button onclick="contador.reset()">Restablecer a 0</button>
+    <script>
+      function imprimirEnConsola() {
+        console.log("Hola mundo!");
+      }
+
+      function cambiarTextoParrafo() {
+        const el = document.getElementById("p4");
+        el.innerText = "Cambiar texto";
+      }
+
+      function Contador() {
+        let contador = 0;
+
+        function updateText(value) {
+          const el = document.getElementById("p5");
+          el.innerText = `Contador ${value}`;
+        }
+
+        function add() {
+          contador++;
+          updateText(contador);
+        }
+
+        function remove() {
+          contador--;
+          updateText(contador);
+        }
+
+        function reset() {
+          contador = 0;
+          updateText(contador);
+        }
+
+        return {
+          add,
+          remove,
+          reset,
+        };
+      }
+
+      let contador = Contador();
+    </script>
+  </body>
+</html>

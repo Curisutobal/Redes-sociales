@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  },
+  "name": "processing",
+  "description": "1. Descargar el proyecto\r 2. Situarse en la carpeta example\r 3. Escribir en consola `npm install`\r 4. Escribir en consola `npm run dev`",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

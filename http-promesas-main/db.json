@@ -1,0 +1,19 @@
+{
+  "inventory": [
+    {
+      "id": 1,
+      "nombreObjeto": "Coca Cola",
+      "precio": 1000
+    },
+    {
+      "id": 2,
+      "nombreObjeto": "Coca Colaaaaa",
+      "precio": 1000000000
+    },
+    {
+      "id": 3,
+      "nombreObjeto": "Coca Cola",
+      "precio": 1000
+    }
+  ]
+}

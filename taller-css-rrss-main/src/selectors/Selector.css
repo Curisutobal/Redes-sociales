@@ -1,0 +1,86 @@
+.box-group {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.box-group div {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(64, 64, 209); 
+  font-size: 4rem; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  cursor: pointer; 
+  transition: 0.5s; 
+  border-radius: 10%; 
+  border: 1px solid grey; 
+  
+}
+
+
+
+.box-group div:hover,
+.box-group:not(:first-child, :last-child) div:not(:first-child, :last-child),
+.box-group:last-child div,
+.box-group div:last-child{
+  background-color: red;
+}
+
+
+.selector-advanced h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid rgb(17, 114, 4);
+  border-radius: 90%;
+  width: 260px;
+  height: 35px;
+  background-color: rgb(78, 184, 64);
+  font-size: medium;
+}
+
+.selector-advanced ul {
+  display: flex;
+  justify-content:left;
+  gap: 70px;
+  width: 100px;
+  height: 40px;
+  font-size: medium;
+  align-items: center;
+  
+}
+
+.selector-advanced form label {
+  display: flex;
+  padding: 5px;
+  justify-content: left;
+  font-size: 20px;
+  font: bolder;
+  font-style: italic;
+  color: rgb(243, 80, 30);
+}
+
+input {
+  background-color:blue;
+  width: 150px;
+  border: 2px solid rgb(194, 194, 194); 
+  color: red
+}
+
+.selector-advanced form label:last-child {
+  background-color: gold;
+}
+
+.selector-advanced div {
+  display: flex;
+  justify-content: center;
+  
+}
+
+div p {
+  font-size: 10px;
+}
+
